@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form'
 import CardContainer from '../CardContainer/CardContainer'
-
+import '../../apiCalls'
+import { getResCards } from '../../apiCalls';
 
 
 
@@ -10,13 +11,19 @@ class App extends Component {
     constructor() {
       super();
       this.state = {
-        resCards: [{"id":1,"name":"Christie","date":"12/29","time":"7:00","number":12}]
+        // resCards: [{"id":1,"name":"Christie","date":"12/29","time":"7:00","number":12}]
+      resCards: []
       }
     }
 
 
 
-
+    componentDidMount() {
+      getResCards()
+      .then(reservations=> {
+        this.setState({resCards:[...this.state.resCards, ...reservations]})
+      })
+    }
 
 
 
