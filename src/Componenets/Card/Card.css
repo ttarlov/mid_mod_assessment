@@ -1,7 +1,11 @@
 .res-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
+    justify-content: space-around;
+    border: 4px solid #017F7F;
+    border-radius: 10px;
     width: 25%;
     height: 200px;
+    color: #017F7F;
+    background-color: white;
 }
