@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form'
+import CardContainer from '../CardContainer/CardContainer'
+
+
+
 
 class App extends Component {
     constructor() {
       super();
       this.state = {
-        resCards: []
+        resCards: [{"id":1,"name":"Christie","date":"12/29","time":"7:00","number":12}]
       }
     }
 
@@ -17,7 +21,7 @@ class App extends Component {
 
 
 
-    
+
 
   render() {
     return (
@@ -27,7 +31,7 @@ class App extends Component {
         <Form />
         </div>
         <div className='resy-container'>
-          
+          <CardContainer resCards = {this.state.resCards} />
         </div>
       </div>
     )
