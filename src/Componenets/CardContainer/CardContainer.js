@@ -3,8 +3,9 @@ import Card from '../Card/Card';
 import './CardContainer.css'
 
 const CardContainer = (props) => {
-    let allResCards = props.resCards.map(resCard => {
-        return <Card {...resCard} />
+    
+    let allResCards = props.resCards.map(card => {
+        return <Card {...card} />
     })
 
 
